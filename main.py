@@ -1,3 +1,5 @@
+import Enemy
+import random
 import os
 import Player
 import pygame
@@ -53,6 +55,45 @@ You have 3 path in front of you:
 3 - Going to a desert
 ''')
         path_option = input('What is your desteny? ')
+
+        #Comment:
+        '''Create a methood ath(userPath)
+         That uses the returnet value from crossroads'''
+
+
+        if(path_option == '1'):
+         # in_the_village() from utils
+            print('you are in the village...')
+            print('From a backside ally a enemy appears')
+            random_number = random.randint(0,2)
+            sound = 'BattleFinal.wav'
+            sounda = sounda.stop()
+            sounda = pygame.mixer.Sound(sound)
+            sounda.play()
+            if random_number == 0:
+                enemy = Enemy.Goblin()
+                input('Press a key to continue')
+            elif random_number == 1:
+                enemy = Enemy.Orc()
+                input('Press a key to continue')
+            elif random_number == 2:
+                enemy = Enemy.Rat()
+                input('Press a key to continue')
+            else:
+                print('Invalid enemy')
+        elif(path_option =='2'):
+    # in_the_forest() from utils
+            print('You are in the forest...')
+        elif(path_option =='3'):
+    # in_the_desert from utils
+            print('You are in the desert...')
+        else:
+            print('Answer not avabile')
+
+
+
+
+
 
     elif answer == '2':
         player_name = input('''
