@@ -23,4 +23,3 @@ class Rat(Enemy):
     def __init__(self):
         super(Rat, self).__init__(10, 100)
         print('Squil!! I am a Rat and I will eat you alivee!!! ')
-
