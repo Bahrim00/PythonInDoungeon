@@ -1,5 +1,3 @@
-import utils_module
-
-utils_module.welcome_message()
-utils_module.start_adventure()
-
+import Utils
+Utils.Utils.intro()
+Utils.Utils.start_game()
