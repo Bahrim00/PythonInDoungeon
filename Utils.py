@@ -44,21 +44,22 @@ class Utils:  # creem o CLASA UTILS pentru a stoca multiple functii utile
                     characters = ('Warrior', 'Wizzard', 'Archer')
 
                     print('These are the strongest beings ')
+                    print("Chose one, and let's start the Journey")
                     for character in characters:
                         print(f'{index} - {character}')
                         index += 1
-                    user_character = int(input('Please choose your character (1,2,3): '))
+                    user_character = int(input('What do you want to be? (1,2,3): '))
 
                     if user_character == 1:
-                        input('You chose to be Warrior, press any key to continue')
+                        input('You chose to be a brave Warrior\n Press any key to continue')
                         Utils.warrior()
                         return Utils.world_intro()
                     elif user_character == 2:
-                        print('You chose to be Wizard')
+                        print('You chose to be a brave Wizard\n Press any key to continue')
                         Utils.wizard()
                         return Utils.world_intro()
                     elif user_character == 3:
-                        print('You chose to be Archer')
+                        print('You chose to be a brave Archer\n Press any key to continue')
                         Utils.archer()
                         return Utils.world_intro()
                     else:
@@ -81,14 +82,14 @@ class Utils:  # creem o CLASA UTILS pentru a stoca multiple functii utile
         os.system('clear')
 
         crossroad_option = ('Village', 'Forest', 'Desert')
-        print('You have to choose your desteny... ')
+        print('As you walk through this strange world, you come to a fork in the road.\n What is the right way?')
         index = 1
         for option in crossroad_option:
             print(f'{index} - {option}')   #
             index += 1
 
 
-        path_chosen = input('Please chose your path: 1,2 or 3 --> ')
+        path_chosen = input('You have to choose your desteny 1,2 or 3 --> ')
         if path_chosen == '1':
             return Utils.village()
         elif path_chosen == '2':
@@ -104,10 +105,9 @@ class Utils:  # creem o CLASA UTILS pentru a stoca multiple functii utile
     @staticmethod
     def village():
         os.system('clear')
-        print('You are in the biggest and scary Village, mind your eye! ')
-        input('Press any key to continue')
+        print('You are in the biggest and scary Village \n The danger is at every step, you have to be careful ')
+        input('When you are ready to explore, press any key')
         Utils.random_enemy()
-        battle.Game.start()
         return
 
 
@@ -117,7 +117,6 @@ class Utils:  # creem o CLASA UTILS pentru a stoca multiple functii utile
         print('You are in the biggest and scary Forest, mind your eye! ')
         input('Press any key to continue')
         Utils.random_enemy()
-        battle.Game.start()
         return
 
 
@@ -127,7 +126,6 @@ class Utils:  # creem o CLASA UTILS pentru a stoca multiple functii utile
         print('You are in the biggest and scary Desert, mind your eye! ')
         input('Press any key to continue')
         Utils.random_enemy()
-        battle.Game.start()
         return
 
 
@@ -165,19 +163,22 @@ class Utils:  # creem o CLASA UTILS pentru a stoca multiple functii utile
             print('Something behind you appears! ')
             enemy.Goblin()
             print('Wrrawr, I am a Goblin, and i will poisoin YOU!!')
-
-
+            print('Be ready for ATTACK! ')
+            battle.Game.start()
 
         elif random_nr == 1:
             print('Something behind you appears! ')
             enemy.Orc()
             print('Grrww, I am a Orc, and i will destroy YOU!!')
+            print('Be ready for ATTACK! ')
+            battle.Game.start()
 
         elif random_nr == 2:
             print('Something behind you appears! ')
             enemy.Rat()
             print('Kiitzzs, I am a Rat, and i will eat YOU!!')
-
+            print('Be ready for ATTACK! ')
+            battle.Game.start()
         return
 
 
